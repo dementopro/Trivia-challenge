@@ -5,31 +5,17 @@ import ButtonGroups from './components/ButtonGroups'
 import { nanoid } from 'nanoid'
 
 function App() {
-  // I may add categories and more options for future iterations
 
-  // this initial array needs to have five blank string so they can be replaced by users quiz choices
   const initialChoicesArray = ['', '', '', '', '']
-  const initialButtonGroupArray = [0, 0, 0, 0, 0]
-  
-  
-  //  I struggled with this part of the code and could not find a solution without creating
-  // separate components and state for each group of answers until I learned how to manipulate
-  // the arrays based on index similar to choices array. May also add each as a property to further consolidate state
-  // if button is clicked change color, remove color and add
-  // color if another button is clicked
+  const initialButtonGroupArray = [0, 0, 0, 0, 0]  
   const [buttonGroup, setButtonGroup] = useState(initialButtonGroupArray)
-  
   const [buttonArray, setButtonArray] = useState([])
-
   const [quiz, setQuiz] = useState(false)
   const [quizData, setQuizData] = useState([])
-  
-  
   const [message, setMessage] = useState(false)
   const [count, setCount] = useState(0)
   const [correctAnswers, setCorrectAnswers] = useState([])
   const [choices, setChoices] = useState(initialChoicesArray)
-
   const [answered, setAnswered] = useState(false)
  
 
